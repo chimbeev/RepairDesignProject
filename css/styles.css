@@ -12,12 +12,49 @@
     box-sizing: border-box;
 }
 
+.button {
+    background: #E3B873;
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+    border: 0;
+    padding: 20px 54px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 27px;
+
+}
+
+.title {
+    font-family: 'Yeseva One', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 37px;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    color: #E3B873;
+}
+
+.subtitle {
+    font-family: 'Yeseva One', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #181818;
+}
+
 .container {
     max-width: 1256px;
     margin: 0 auto;
 }
 
-.button {
+.header-button {
     background: #E3B873;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     border-radius: 2px;
@@ -34,7 +71,17 @@
 }
 
 .logo {
-    color: #E3B873
+    color: #E3B873;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+.phone {
+    text-decoration-line: underline;
 }
 
 .header {
@@ -91,7 +138,7 @@
 
 }
 
-.title {
+.welcome_block__title {
     margin: 0;
     font-family: 'Yeseva One', 'Times New Roman', Times, serif;
     font-style: normal;
@@ -99,4 +146,5 @@
     font-size: 40px;
     line-height: 53px;
     text-transform: uppercase;
+    color: white;
 }
