@@ -49,6 +49,33 @@
     color: #181818;
 }
 
+.input {
+    width: 231px;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    color: #363636;
+
+}
+
+.label {
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    color: rgba(54, 54, 54, 0.5);
+
+}
+
 .container {
     max-width: 1256px;
     margin: 0 auto;
@@ -67,6 +94,7 @@
     font-weight: 400;
     font-size: 11px;
     line-height: 15px;
+    
 
 }
 
@@ -78,10 +106,12 @@
     font-size: 11px;
     line-height: 15px;
     text-transform: uppercase;
+    
 }
 
 .phone {
     text-decoration-line: underline;
+    margin-left: 20px;
 }
 
 .header {
@@ -118,6 +148,8 @@
     background-size: cover;
     height: 707px;
     padding-top: 194px;
+    padding-left: 134px;
+    padding-right: 627px;
     position: relative;
 }
 
@@ -147,4 +179,22 @@
     line-height: 53px;
     text-transform: uppercase;
     color: white;
+}
+
+.welcome_block__NameOfCity {
+    color: #E3B873;
+}
+
+.welcome_block__subtitle {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 36px;
+    color: #FFFFFF;
+    text-transform: none;
+}
+
+.welcome_block__button {
+    font-style: italic;
 }
