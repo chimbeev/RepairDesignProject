@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+.main {
+    background-color: #363636;
+}
+
 .button {
     background: #E3B873;
     box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
@@ -148,7 +152,7 @@
     background-size: cover;
     height: 707px;
     padding-top: 194px;
-    padding-left: 134px;
+    padding-left: 200px;
     padding-right: 627px;
     position: relative;
 }
@@ -197,4 +201,110 @@
 
 .welcome_block__button {
     font-style: italic;
+}
+
+.page2 {
+    display: flex;
+    /*justify-content: center;*/
+    background-color: black;
+    flex-direction: column;
+    
+}
+.page2__header {
+    background-color: black;
+    height: 83px;
+}
+
+.page2__header__content {
+    display: flex;
+    justify-content: center;
+    height: 83px;
+    align-items: center;
+}
+
+.page2__header__navigation {
+    list-style: none;
+    display: flex;
+
+}
+
+.page2__header__navigation__item {
+    
+}
+
+.page2__menu__item {
+    color: rgba(255, 255, 255, 0.3);
+    margin-right: 47px;
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.page2__main__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.page2__text {
+    
+    display: flex;
+    flex-direction: column;
+}
+.page2__text__main {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: #FFFFFF;
+    text-transform: none;
+}
+
+.page2__text__subtitle {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #E3B873;
+}
+
+.page2__text__small {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-transform: none;
+}
+
+.page2__text__block {
+    display: inline-block;
+}
+.page2__text__block2 {
+    margin-left: 100px;
+}
+
+.page2__text__line1 {
+    display: flex;
+
+}
+.page2__text__line2 {
+    display: flex;
+    
+}
+
+.page2__text__block4 {
+    margin-left: 60px;
+}
+
+.page2__pic {
+    /*padding-left: 50px;*/
+    justify-self: flex-end;
 }
