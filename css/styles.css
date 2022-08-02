@@ -31,6 +31,12 @@
 
 }
 
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 20px #f70445ed;
+    outline: 3px solid #6B46C1;
+}
+
 .title {
     font-family: 'Yeseva One', sans-serif;
     font-style: normal;
@@ -98,8 +104,12 @@
     font-weight: 400;
     font-size: 11px;
     line-height: 15px;
-    
+}
 
+.header-button:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 20px #f70445ed;
+    outline: 3px solid #6B46C1;
 }
 
 .logo {
@@ -144,7 +154,11 @@
 .header-navigation__item a {
     text-decoration: none;
     color: white;
+}
 
+.page1__menu__item:hover {
+    color: #E3B873;
+    border-bottom: 2px solid #E3B873;
 }
 
 .hero {
@@ -208,7 +222,11 @@
     /*justify-content: center;*/
     background-color: black;
     flex-direction: column;
-    
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 1074px;
+    position: relative; 
+ 
 }
 .page2__header {
     background-color: black;
@@ -217,19 +235,16 @@
 
 .page2__header__content {
     display: flex;
-    justify-content: center;
+    justify-content: right;    
     height: 83px;
     align-items: center;
+    padding-right: 40px;
 }
 
 .page2__header__navigation {
     list-style: none;
     display: flex;
 
-}
-
-.page2__header__navigation__item {
-    
 }
 
 .page2__menu__item {
@@ -241,12 +256,17 @@
     font-size: 14px;
     line-height: 19px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
+.page2__menu__item:hover {
+    color: #E3B873;
+    border-bottom: 2px solid #E3B873;
+}
 .page2__main__block {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     
 }
 .page2__text {
@@ -305,6 +325,53 @@
 }
 
 .page2__pic {
-    /*padding-left: 50px;*/
-    justify-self: flex-end;
+    width: 679px;
+    height: 482px;
+}
+
+.page2__arrows {
+    width: 205px;
+    height: 14px;
+    margin-top: 57px;
+}
+
+.page3 {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 1074px;
+    align-items: center;
+}
+
+.page3__pic1 {
+    width: 196px;
+    height: 67px;
+    position: absolute;
+    margin-top: -376px;
+}
+
+.page3__pic2 {
+    width: 817px;
+    height: 434px;
+    position: absolute;
+    margin-top: -264px;
+}
+
+.page3__pic3 {
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    margin-top: -105px;
+}
+
+.page3__line {
+    width: 55px;
+    height: 1.54px;
+    background: #E3B873;
+    border-radius: 30px;
+    position: absolute;
+    margin-top: 155px;
+
 }
