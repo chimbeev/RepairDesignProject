@@ -28,7 +28,7 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 27px;
-
+    text-align: center;
 }
 
 .button:hover {
@@ -120,7 +120,7 @@
     font-size: 11px;
     line-height: 15px;
     text-transform: uppercase;
-    
+
 }
 
 .phone {
@@ -225,17 +225,18 @@
     padding-left: 200px;
     padding-right: 200px;
     height: 1074px;
-    position: relative; 
- 
+    position: relative;
+
 }
+
 .page2__header {
     background-color: black;
-    height: 83px;
+    height: 160px;
 }
 
 .page2__header__content {
     display: flex;
-    justify-content: right;    
+    justify-content: right;
     height: 83px;
     align-items: center;
     padding-right: 40px;
@@ -244,6 +245,7 @@
 .page2__header__navigation {
     list-style: none;
     display: flex;
+    margin-top: 140px;
 
 }
 
@@ -263,17 +265,20 @@
     color: #E3B873;
     border-bottom: 2px solid #E3B873;
 }
+
 .page2__main__block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
 }
+
 .page2__text {
-    
+
     display: flex;
     flex-direction: column;
 }
+
 .page2__text__main {
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -307,6 +312,7 @@
 .page2__text__block {
     display: inline-block;
 }
+
 .page2__text__block2 {
     margin-left: 100px;
 }
@@ -315,9 +321,10 @@
     display: flex;
 
 }
+
 .page2__text__line2 {
     display: flex;
-    
+
 }
 
 .page2__text__block4 {
@@ -345,25 +352,35 @@
     align-items: center;
 }
 
+.page3__main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: -273px;
+
+}
+
 .page3__pic1 {
     width: 196px;
     height: 67px;
-    position: absolute;
-    margin-top: -376px;
+    /*position: absolute;*/
+    /*margin-top: -376px;*/
 }
 
 .page3__pic2 {
     width: 817px;
     height: 434px;
-    position: absolute;
-    margin-top: -264px;
+    /*position: absolute;*/
+    /*margin-top: -264px;*/
 }
 
 .page3__pic3 {
-    width: 85px;
-    height: 85px;
+    width: 125px;
+    height: 125px;
     position: absolute;
-    margin-top: -105px;
+    top: 210px;
+    /*margin-top: -105px;*/
 }
 
 .page3__line {
@@ -371,7 +388,169 @@
     height: 1.54px;
     background: #E3B873;
     border-radius: 30px;
-    position: absolute;
-    margin-top: 155px;
+    /*position: absolute;*/
+    /*margin-top: 155px;*/
 
+}
+
+.page3__text {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 37px;
+    text-align: center;
+    color: #363636;
+    text-transform: none;
+}
+
+.page3__block__input {
+    width: 791px;
+    height: 51px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 91px;
+}
+
+.page3__checkbox__text {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    color: #181818;
+    text-transform: none;
+    margin-left: 10px;
+
+}
+
+.page3__checkbox__flag {
+    width: 18px;
+    height: 18px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    background-color: #E3B873;
+}
+
+/*--------Кастомный чекбокс----------------------*/
+/*Стиль метки, содержащей элемент ввода*/
+.page3__checkbox {
+    display: flex;
+    position: relative;
+    padding-left: 24px;
+    margin-top: 33px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+}
+
+/* Прячем чекбокс который по умолчанию */
+.page3__checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    left: 11px;
+}
+
+/* Устанавливаем галочку (она будет скрыта, если не отмечена) */
+.page3__checkbox__flag:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Показывать галочку при выбранном ответе */
+.page3__checkbox input:checked~.page3__checkbox__flag:after {
+    display: block;
+}
+
+/* Стилизуем галочку */
+.page3__checkbox .page3__checkbox__flag:after {
+    left: 29px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    background-color: #E3B873;
+}
+
+.page3__type_repair__pic {
+    margin-top: 75px;
+}
+
+.page3__block__typesOfRepair {
+    width: 1236px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 31px;
+    justify-content: space-between;
+
+}
+
+.page3__blockRepair {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.page3__repair__pic {
+    width: 392px;
+    height: 421px;
+}
+
+.page3__repair__textBlock {
+    width: 330px;
+    height: 286px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 294px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+.page3__repair__title {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #363636;
+    text-transform: none;
+}
+
+.page3__repair__text {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 27px;
+    color: #959595;
+    text-transform:none ;
+}
+
+.page3__repair__redecor__text {}
+
+.page3__repair__overhaul__text {}
+
+.page3__repair__designer__text {}
+
+.page3__repair__selectButton {
+    width: 228px;
+    height: 54px;
+    position: absolute;
+    bottom: -185px;
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 18px 0px;
 }
