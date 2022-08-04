@@ -348,7 +348,7 @@
     flex-direction: column;
     padding-left: 200px;
     padding-right: 200px;
-    height: 1074px;
+    /*height: 1074px;*/
     align-items: center;
 }
 
@@ -522,6 +522,7 @@
     line-height: 25px;
     color: #363636;
     text-transform: none;
+    margin-left: -15px;
 }
 
 .page3__repair__text {
@@ -531,7 +532,7 @@
     font-size: 13px;
     line-height: 27px;
     color: #959595;
-    text-transform:none ;
+    text-transform: none;
 }
 
 .page3__repair__redecor__text {}
@@ -553,4 +554,81 @@
     text-transform: uppercase;
     color: #FFFFFF;
     padding: 18px 0px;
+}
+
+.page4 {
+    background-color: #FFFFFF;
+    display: flex;
+    position: relative;
+    padding-top: 124px;
+    height: 1074px;
+}
+
+.page4__main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 725px;
+}
+
+.page4__main__pic {
+    width: 1000px;
+    height: 645px;
+    position: absolute;
+}
+
+.page4__main__pic_over {
+    position: absolute;
+    left: 352px;
+    top: 100px;
+}
+
+.page4__main__block {
+    width: 506px;
+    /*height: 509px;*/
+    background-color: black;
+    margin-top: 84px;
+    position: absolute;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page4__main__block__title {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: none;
+}
+
+.page4__block__input {
+    width: 231px;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    color: #FFFFFF;
+
+}
+
+.page4__block__label {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+
+    color: rgba(255, 255, 255, 0.5);
+
 }
