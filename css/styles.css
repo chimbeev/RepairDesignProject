@@ -178,6 +178,12 @@
     margin: 0 auto;
 }
 
+.container__header {
+    max-width: 1256px;
+    margin: 0 auto;
+    
+}
+
 .logo {
     color: #E3B873;
     font-family: 'Nunito Sans';
