@@ -451,7 +451,6 @@
         position: relative;
         width: 679px;
         height: 482px;
-
     }
 
     .slider__images-title {
@@ -494,7 +493,7 @@
     }
 
     .slider__arrow {
-        position: absolute;
+        /*position: absolute;*/
         width: 15%;
         height: 100%;
         font-size: 20px;
