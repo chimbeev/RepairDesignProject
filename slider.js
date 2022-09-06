@@ -91,16 +91,17 @@ function initSlider(options) { //Функция для инициализаци�
         if (options.titles) changeTitle(num);
     }
 
-    function initTitles() { //показывает подпись к картинке 0
-        let titleDiv = `<div class="slider__images-title">${images[0].title}</div>`;
-        sliderImages.innerHTML += cropTitle(titleDiv, 50);
+    function initTitles() { //подсвечиваем подпись к картинке 0
+        let titleDiv = document.querySelector(".Projects__header__navigation:nth-child(1)");
+        titleDiv.classList.add("Projects__menu__item:hover");
+        
     }
 
     function changeTitle(num) {
         if (!images[num].title) return; //Если нету подписи в массиве, то стоп и возврат
-        let sliderTitle = sliderImages.querySelector(".slider__images-title"); //обращение через DOM обьект
+        let sliderTitle = document.querySelector(".Projects__header__navigation:nth-child(2)"); //обращение через DOM обьект
         //.slider__images-title
-        sliderTitle.innerText = cropTitle(images[num].title, 50); //записать в DOM обьект обрезанную подпись
+        sliderTitle.classList.add("Projects__menu__item:hover"); //записать в DOM обьект 
     }
 
     function cropTitle(title, size) { //обрезать подпись до 50 символов
