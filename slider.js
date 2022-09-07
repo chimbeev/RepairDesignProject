@@ -13,7 +13,7 @@ function initSlider(options) { //Функция для инициализаци�
     if (!images || !images.length) return; //Если массив пустой или длина массива равна нулю то не запускаем
 
     options = options || { //Настройки по умолчанию если не указаны опции при запуске
-        titles: false,
+        titles: true,
         dots: true,
         autoplay: false
     };
@@ -22,6 +22,7 @@ function initSlider(options) { //Функция для инициализаци�
     //Обьект содержит картинки
     let sliderArrows = document.querySelector(".slider__arrows");//Обьект содержит стрелки
     let sliderDots = document.querySelector(".slider__dots");//Обьект содержит точки
+    let sliderTitles = document.querySelectorAll(".Projects__header__navigation__item"); //Обьект содержит названия картинок (меню над картинками)
 
     initImages(); //Показать картинки
     initArrows();//Показать стрелки
@@ -80,6 +81,12 @@ function initSlider(options) { //Функция для инициализаци�
         })
     }
 
+    function initTitles() { //подсвечиваем подпись к картинке 0
+        
+        
+        sliderTitles[0].querySelector(".Projects__menu__item").classList.add("active");
+    }
+
     function moveSlider(num) { //показывает картинку
         sliderImages.querySelector(".active").classList.remove("active");//у активной картинки убирает
         //метку что она активна
@@ -88,20 +95,18 @@ function initSlider(options) { //Функция для инициализаци�
             sliderDots.querySelector(".active").classList.remove("active");
             sliderDots.querySelector(".n" + num).classList.add("active");
         }
-        if (options.titles) changeTitle(num);
+        sliderTitles.querySelector(".Projects__menu__item").querySelector("active").classList.remove("active");
+        sliderTitles.querySelector(".Projects__menu__item").querySelector(".n" + num).classList.add("active");
     }
 
-    function initTitles() { //подсвечиваем подпись к картинке 0
-        let titleDiv = document.querySelector(".Projects__header__navigation:nth-child(1)");
-        titleDiv.classList.add("Projects__menu__item:hover");
-        
-    }
+    
 
     function changeTitle(num) {
         if (!images[num].title) return; //Если нету подписи в массиве, то стоп и возврат
-        let sliderTitle = document.querySelector(".Projects__header__navigation:nth-child(2)"); //обращение через DOM обьект
-        //.slider__images-title
-        sliderTitle.classList.add("Projects__menu__item:hover"); //записать в DOM обьект 
+        let container = document.querySelector(".Projects__header__navigation");
+        let sliderTitle = container.querySelectorAll(".Projects__header__navigation__item > .Projects__menu__item");
+        sliderTitle[num].classList.toggle("Projects__menu__item__select");
+        sliderTitle[num].classList.toggle("Projects__menu__item__select"); //записать в DOM обьект 
     }
 
     function cropTitle(title, size) { //обрезать подпись до 50 символов
