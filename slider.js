@@ -95,8 +95,13 @@ function initSlider(options) { //Функция для инициализаци�
             sliderDots.querySelector(".active").classList.remove("active");
             sliderDots.querySelector(".n" + num).classList.add("active");
         }
-        sliderTitles.querySelector(".Projects__menu__item").querySelector("active").classList.remove("active");
-        sliderTitles.querySelector(".Projects__menu__item").querySelector(".n" + num).classList.add("active");
+
+        //sliderTitles.forEach(element => element.querySelector(".active").classList.remove("active"));
+        sliderTitles.forEach(element => {let as = element.querySelector(".active"); as.classList.remove("active")}); //получить активный пункт меню и погасить
+        //sliderTitles.getElementsByClassName(".active");
+        //sliderTitles.querySelector(".Projects__menu__item").querySelector("active").classList.remove("active");
+        //sliderTitles.querySelector(".Projects__menu__item").querySelector(".n" + num).classList.add("active");
+        sliderTitles[num].querySelector(".Projects__menu__item").classList.add("active");
     }
 
     
