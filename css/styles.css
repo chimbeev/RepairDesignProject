@@ -366,7 +366,7 @@
 
     .Projects__menu__item.active {
         color: #E3B873;
-        /*border-bottom: 2px solid #E3B873;*/
+        border-bottom: 2px solid #E3B873;
     }
 
     .Projects__main__block {
@@ -431,9 +431,7 @@
     }
 
     .Projects__pic {
-        width: 679px;
-        height: 482px;
-        background-image: url("/image/image21.png");
+        display: none;
     }
 
     .Projects__arrows {

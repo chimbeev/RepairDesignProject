@@ -9,6 +9,8 @@ let images = [{ //Создаем массив с картинками
     title: "ROSTOV-ON-DON PATRIOTIC"
 }];
 
+
+
 function initSlider(options) { //Функция для инициализации слайдера, передаем опции запуска (заголовки, точки, автопросмотр)
     if (!images || !images.length) return; //Если массив пустой или длина массива равна нулю то не запускаем
 
@@ -23,6 +25,7 @@ function initSlider(options) { //Функция для инициализаци�
     let sliderArrows = document.querySelector(".slider__arrows");//Обьект содержит стрелки
     let sliderDots = document.querySelector(".slider__dots");//Обьект содержит точки
     let sliderTitles = document.querySelectorAll(".Projects__header__navigation__item"); //Обьект содержит названия картинок (меню над картинками)
+    let sliderInfo = document.querySelectorAll(".Projects__text__small"); //Обьект содержит данные по обьекту
 
     initImages(); //Показать картинки
     initArrows();//Показать стрелки
@@ -81,10 +84,12 @@ function initSlider(options) { //Функция для инициализаци�
         })
     }
 
-    function initTitles() { //подсвечиваем подпись к картинке 0
-        
-        
+    function initTitles() { //подсвечиваем подпись к картинке 0 и выводим данные по обьекту
         sliderTitles[0].querySelector(".Projects__menu__item").classList.add("active");
+        sliderInfo[0].innerHTML="Rostov-on-Don";
+        sliderInfo[1].innerHTML="81 m2";
+        sliderInfo[2].innerHTML="3.5 months";
+        sliderInfo[3].innerHTML="Upon request";
     }
 
     function moveSlider(num) { //показывает картинку
@@ -94,33 +99,28 @@ function initSlider(options) { //Функция для инициализаци�
         if (options.dots) {
             sliderDots.querySelector(".active").classList.remove("active");
             sliderDots.querySelector(".n" + num).classList.add("active");
-        }
-
-        //sliderTitles.forEach(element => element.querySelector(".active").classList.remove("active"));
-        sliderTitles.forEach(element => {let as = element.querySelector(".active"); as.classList.remove("active")}); //получить активный пункт меню и погасить
-        //sliderTitles.getElementsByClassName(".active");
-        //sliderTitles.querySelector(".Projects__menu__item").querySelector("active").classList.remove("active");
-        //sliderTitles.querySelector(".Projects__menu__item").querySelector(".n" + num).classList.add("active");
+        } //подсвечиваем пункт меню на картинкой при смене картинки
+        sliderTitles[0].querySelector(".Projects__menu__item").classList.remove("active");
+        sliderTitles[1].querySelector(".Projects__menu__item").classList.remove("active");
+        sliderTitles[2].querySelector(".Projects__menu__item").classList.remove("active");
         sliderTitles[num].querySelector(".Projects__menu__item").classList.add("active");
     }
 
-    
+    sliderTitles[0].querySelector(".Projects__menu__item").addEventListener('click', function(e) {
+        e.preventDefault();
+        moveSlider(0);
+    });
 
-    function changeTitle(num) {
-        if (!images[num].title) return; //Если нету подписи в массиве, то стоп и возврат
-        let container = document.querySelector(".Projects__header__navigation");
-        let sliderTitle = container.querySelectorAll(".Projects__header__navigation__item > .Projects__menu__item");
-        sliderTitle[num].classList.toggle("Projects__menu__item__select");
-        sliderTitle[num].classList.toggle("Projects__menu__item__select"); //записать в DOM обьект 
-    }
+    sliderTitles[1].querySelector(".Projects__menu__item").addEventListener('click', function(e) {
+        e.preventDefault();
+        moveSlider(1);
+    });
 
-    function cropTitle(title, size) { //обрезать подпись до 50 символов
-        if (title.length <= size) {
-            return title;
-        } else {
-            return title.substr(0, size) + "...";
-        }
-    }
+    sliderTitles[2].querySelector(".Projects__menu__item").addEventListener('click', function(e) {
+        e.preventDefault();
+        moveSlider(2);
+    });
+
 
     function initAutoplay() { //автопоказ картинок
         setInterval(() => {
